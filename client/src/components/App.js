@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { withAuthenticator } from 'aws-amplify-react';
 import SignupPage from './SignupPage'
 import LoginPage from './LoginPage'
 import PublicPage from './PublicPage'
@@ -19,4 +20,4 @@ const App = () => (
   </div>
 )
 
-export default App;
+export default withAuthenticator(App);
